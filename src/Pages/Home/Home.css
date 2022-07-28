@@ -1,7 +1,37 @@
 .titulo{
-    color: aliceblue;
+    color: #ffff90;
     text-align: center;
     -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: blue;
-    
+    -webkit-text-stroke-color: #82ffba;
 }
+
+.fundo{
+    background: #82ffba;
+    background: linear-gradient(90deg, #82ffba 30%, #ffff90 70%);
+}
+
+.texto{
+    -webkit-background-clip: text; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, #82ffba 30%, #ffff90 70%);;
+    font-weight:bolder!important;
+    font-size: 100px;
+    padding-left: 5%;
+}
+.texto2{
+    -webkit-background-clip: text; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg,  #ffff90 1%, #82ffba 2%);;
+    font-weight:bolder!important;
+    font-size: 35px;
+    padding-left: 5%;
+}
+
+.container{
+    margin-left: 70px;
+    justify-content: left!important;
+    align-items: left!important;
+}
+

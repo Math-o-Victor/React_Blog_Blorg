@@ -1,10 +1,15 @@
 import './App.css';
-import { Box, Grid, Paper } from '@material-ui/core';
+import Footer from './Components/Static/Footer/Footer'
+import Navbar from './Components/Static/Navbar/Navbar';
 import Home from './Pages/Home/Home';
 
 function App() {
   return (
-    <Home />
+    <>
+      <Navbar />
+      <Home />
+      <Footer />
+    </>
   );
 }
 

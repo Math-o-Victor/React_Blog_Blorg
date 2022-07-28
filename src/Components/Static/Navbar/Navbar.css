@@ -1,0 +1,15 @@
+.bg-menu{
+    background-image: linear-gradient(90deg, rgba(130,255,186,1) 3%, rgba(255,255,144,1) 95%);;
+}
+
+.title{
+    padding:10px;
+    font-weight: bolder!important;
+}
+
+.logout{
+    padding:10px;
+    font-weight: bold!important;
+    justify-content: flex-end;
+}
+
