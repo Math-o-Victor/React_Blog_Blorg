@@ -14,18 +14,18 @@ function Footer() {
                     <>
                     <Box className='bg-menu'>
                         <Box paddingTop={0.5} display="flex" justifyContent="center">
-                            <Typography variant="h6" align="center" gutterBottom style={{ color: "white", fontSize: "17px" }}>
+                            <Typography variant="h6" align="center" gutterBottom className='feedback'>
                                 Para ver mais do criador ou sugerir mudanças:</Typography>
                         </Box>
                         <Box className='container' style={{ marginLeft: "605px"}}>
                             <a href="https://www.instagram.com/maninhouau/" target="_blank" rel="noreferrer">
-                                <InstagramIcon style={{ fontSize: 35, color: "white" }} />
+                                <InstagramIcon className='icone' />
                             </a>
                             <a href="https://www.linkedin.com/in/MathKitsch/" target="_blank" rel="noreferrer">
-                                <LinkedInIcon style={{ fontSize: 35, color: "white" }} />
+                                <LinkedInIcon className='icone' />
                             </a>
                             <a href="mailto:matheusvictor840@gmail.com" target="_blank" rel="noreferrer">
-                                <MailOutlineIcon style={{ fontSize: 35, color: "white" }} />
+                                <MailOutlineIcon className='icone' />
                             </a>
                         </Box>
                     

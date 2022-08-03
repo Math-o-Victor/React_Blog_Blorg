@@ -1,0 +1,7 @@
+.imagemCadastro{
+    background-image: url(https://i.pinimg.com/originals/05/84/ac/0584acf0c9eecc40af951b7fcf3a8f45.gif);
+        background-size:cover;
+        font-size: 320px;
+        width: '100vh'!important;
+        background-position: center;
+}

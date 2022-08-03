@@ -1,0 +1,22 @@
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.imagem{
+    background-image: url(https://c.tenor.com/BgR83Df82t0AAAAd/portal-rick-and-morty.gif);
+    background-size:16%;
+    font-size: 320px;
+    width: '100vh'!important;
+    background-position: center;
+}
+
+.cadastre{
+    font-weight:'bold'
+}
+
+.entre{
+    margin-top: 3%;
+    font-weight: 900!important;
+    background-position:center;
+    background-size: contain;
+}
