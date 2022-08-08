@@ -3,20 +3,46 @@
 }
 
 .imagem{
-    background-image: url(https://c.tenor.com/BgR83Df82t0AAAAd/portal-rick-and-morty.gif);
-    background-size:16%;
+    background-color: black;
     font-size: 320px;
     width: '100vh'!important;
     background-position: center;
 }
 
 .cadastre{
-    font-weight:'bold'
+    font-weight:'bold';
+    font-size: 30px!important;
+    font-family: 'Righteous', cursive!important;
+    font-weight: 900!important;
+    background-position:center;
+    background-size: contain;
+    color: white!important;
 }
 
 .entre{
     margin-top: 3%;
+    font-family: 'Righteous', cursive!important;
     font-weight: 900!important;
     background-position:center;
     background-size: contain;
+    color: white!important;
+    opacity: 90%;
+}
+
+.waves{
+    padding: 2%;
+    background-position: center;
+    background-size: 38%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255,0),black 100%),url('https://i.pinimg.com/originals/df/99/e2/df99e2fd1f55c0b8a8d70bb3d5b3cf67.gif');
+    background-size: cover;
+}
+
+.gradiente{
+    background-position: left;
+    background: #000000;
+}
+
+.fundob{
+    background-color: white;
+    opacity: 70%;
 }

@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Box } from '@mui/material';
 import useLocalStorage from 'react-use-localstorage';
 import UsuarioLogin from "../../models/UsuarioLogin";
-import { api, login } from "../../services/services";
+import { login } from "../../services/services";
 import './Login.css'
 
 function Login() {
@@ -19,14 +19,14 @@ function Login() {
     })
 
     useEffect(()=>{
-        if(token != ''){
+        if(token !== ''){
             navigate('/home')
         }
     }, [token])
 
     function updatedModel(e: ChangeEvent<HTMLInputElement>){
         setUsuarioLogin({
-            ... UsuarioLogin, [e.target.name]:e.target.value
+            ...UsuarioLogin,[e.target.name]:e.target.value
         })
     }
 
@@ -37,45 +37,40 @@ function Login() {
             await login (`/usuarios/logar`, UsuarioLogin, setToken)
             alert('Login realizado com sucesso. Bem Vindo de Volta!');
         }catch(error){
-            alert('Dados inválidos. Erro no login. :(')
+            alert('Dados inválidos. Erro no login. :´(')
         }
     }
 
     return (
-        <Grid container direction="row" justifyContent="center" alignItems="center">
+        <Grid container direction="row" justifyContent="center" alignItems="center" className='gradiente, fundo'>
 
-            <Grid alignItems="center" item xs={6}>
+            <Grid alignItems="center" item xs={12} className='waves'>
                 <Box paddingX={20} minWidth={100}>
                     <form onSubmit={onSubmit}>
-                        <Typography variant="h2" gutterBottom color='textPrimary' align="center" className="entre">Entre</Typography>
-                        <TextField value={UsuarioLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal' fullWidth></TextField>
-                        <TextField value={UsuarioLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth></TextField>
+                        <Typography variant="h2" gutterBottom color='textPrimary' align="center" className="entre">Login</Typography>
+                        <TextField value={UsuarioLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Email' variant='outlined' name='usuario' margin='normal' className='fundob' fullWidth></TextField>
+                        <TextField value={UsuarioLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' className='fundob' fullWidth></TextField>
 
-                        <Button type='submit' variant='contained' color='primary'>
+                        <Button type='submit' variant='contained' color='primary' className='Botao'>
                             Logar
                         </Button>
                              
                     </form>
                     <Box display='flex' justifyContent='center' marginTop={2}>
                         <Box marginRight={1}>
-                            <Typography variant='subtitle1' gutterBottom align='center'>
+                            <Typography variant='subtitle1' gutterBottom align='center' className="entre">
                                 Ainda não tem uma conta?
                             </Typography>
                         </Box>
 
                         <Link to="/cadastroNewUser" className='text-decorator-none'>
-                            <Typography variant='subtitle1' gutterBottom align='center' className="cadastre">
+                            <Typography gutterBottom align='center' className="cadastre">
                                 Cadastre-se aqui!
                             </Typography>
                         </Link>
                     </Box>
                 </Box>
             </Grid>
-
-            <Grid xs={6} className="imagem">
-                <h1> </h1> 
-            </Grid>
-
         </Grid>
     )
 }

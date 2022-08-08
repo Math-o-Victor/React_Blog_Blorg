@@ -1,0 +1,24 @@
+.titulo{
+    font-weight: bold;
+    font-family: 'Righteous', cursive!important;
+ }
+
+ .fundo{
+    background: #82ffba;
+    background: linear-gradient(90deg, #000000 45%, #ffffff 55%);
+}
+
+.bold{
+    text-transform: capitalize!important;
+    color: white!important;
+    font-family: 'Righteous', cursive!important;
+}
+
+.boldin{
+    text-transform: capitalize!important;
+    color: white;
+}
+
+.odnuf{
+    background: black;
+}

@@ -1,0 +1,13 @@
+.padding1{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.botao{
+    background-color: black!important;
+    position:relative!important;
+}
+
+.centro{
+    justify-content: right!important;
+}

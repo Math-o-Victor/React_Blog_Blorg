@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 .App {
   text-align: center;
 }
@@ -11,6 +13,11 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+body, html {
+  font-family: 'Righteous', cursive;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 .App-header {

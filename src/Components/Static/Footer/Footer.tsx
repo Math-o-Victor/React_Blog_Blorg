@@ -17,7 +17,7 @@ function Footer() {
                             <Typography variant="h6" align="center" gutterBottom className='feedback'>
                                 Para ver mais do criador ou sugerir mudanças:</Typography>
                         </Box>
-                        <Box className='container' style={{ marginLeft: "605px"}}>
+                        <Box style={{ marginLeft: "605px"}}>
                             <a href="https://www.instagram.com/maninhouau/" target="_blank" rel="noreferrer">
                                 <InstagramIcon className='icone' />
                             </a>

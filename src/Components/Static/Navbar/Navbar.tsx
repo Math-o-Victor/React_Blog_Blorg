@@ -1,58 +1,55 @@
 import React from "react";
-import { AppBar, Toolbar, Typography} from "@material-ui/core";
+import { AppBar, Toolbar } from "@material-ui/core";
 import './Navbar.css'
 import { Box } from "@mui/material";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import useLocalStorage from "react-use-localstorage";
 
 function Navbar(){
+
+    const [token, setToken] = useLocalStorage('token');
+    let navigate = useNavigate();
+
+    function goLogout(){
+        setToken('')
+        alert('Você está sendo deslogado, faça login para continuar')
+        navigate('/login')
+    }
+
     return (
         <>
-            <AppBar position="static" className='bg-menu'>
+            <AppBar position="static" className='bg-menu textow'>
                 <Toolbar>
                     <Link to='/home' className='text-decorator-none'>
-                        <Box mx={1} className='blorg'>
-                        <Typography className='title' variant="h2">
-                            Blorg!
-                        </Typography>
+                        <Box mx={1} >
+                        <img className='blorg' src="https://imageshack.com/i/pmrMBJiYj" alt="Blorg!" />
                         </Box>
                     </Link>
 
                     <Link to='/home' className='text-decorator-none'>
-                        <Box mx={1} className='cursor'>
-                        <Typography className='title' variant="h6">
-                            Home
-                        </Typography>
+                        <Box mx={1}>
+                        <img className='home' src="https://imageshack.com/i/poJwhMu0j" alt="home" />
                         </Box>
                     </Link>
 
-                    <Box mx={1} className='cursor'>
-                        <Typography className='title' variant='h6'>
-                         Ideias
-                        </Typography>
-                    </Box>
-
-                    <Box mx={1} className='cursor'>
-                        <Typography className='title' variant='h6'>
-                        Categorias
-                        </Typography>
-                    </Box>
-
-                    <Box mx={1} className='cursor'>
-                        <Typography className='title' variant='h6'>
-                        Criar Categoria
-                        </Typography>
-                    </Box>
-
-                    
-                    <Link to='/login' className='text-decorator-none'>
-                    <Box mx={1} className='cursor'>
-                        <Typography className='logout' variant='h6'>
-                            Logout
-                        </Typography>
-                    </Box>
+                    <Link to='/ideias' className='text-decorator-none'>
+                        <Box mx={1} className='cursor'>
+                            <img className='size'src="https://imageshack.com/i/poqOipxlj" alt="ideias" />
+                        </Box>
                     </Link>
-                    
 
+                    <Link to='/categorias' className='text-decorator-none'>
+                        <img className='size' src="https://imageshack.com/i/pnBkCwlIj" alt="categorias" />
+                    </Link>
+
+                    <Link to='/formularioTema' className='text-decorator-none'>
+                        <Box mx={1} className='cursor'>
+                            <img className='size' src="https://imageshack.com/i/pnno8Yj3j" alt="nova categoria" />
+                        </Box>
+                    </Link>
+                        <Box mx={1} className='cursor' onClick={goLogout}>
+                            <img className='size' src="https://imageshack.com/i/pmtu1w8Xj" alt="logout" />
+                        </Box>
                 </Toolbar>
             </AppBar>
         </>

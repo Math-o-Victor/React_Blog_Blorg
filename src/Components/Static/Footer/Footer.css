@@ -5,11 +5,13 @@
 }
 
 .textWhite{
+    font-family: 'Righteous', cursive!important;
     color: #ffffff;
     font-weight: bolder!important;
 }
 
 .feedback{
+    font-family: 'Righteous', cursive!important;
     color: white;
     font-size: 17px!important;
 }
