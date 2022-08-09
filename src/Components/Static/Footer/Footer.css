@@ -1,7 +1,8 @@
-.container{
-    margin-left: 100px;
+.containerF{
     justify-content: center!important;
     align-items: center!important;
+    position:relative;
+    display: flex;
 }
 
 .textWhite{
@@ -17,6 +18,8 @@
 }
 
 .icone{
+    display: inline-block!important;
     font-size: 35px!important;
     color: white;
+    text-align: center;
 }

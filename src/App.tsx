@@ -7,14 +7,16 @@ import Login from './pages/login/Login'
 import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import ListaTema from './components/temas/listaTemas/ListaTemas';
 import ListaPostagem from './components/postagens/listaPostagem/ListaPostagem';
-
 import CadastroTema from './components/temas/cadastroTema/CadastroTema';
 import DeletarTema from './components/temas/deletarTema/DeletarTema';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 import CadastroPostagem from './components/postagens/cadastroPostagem/CadastroPostagem';
+import { Provider } from 'react-redux';
+import store from './store/Store';
 
 function App() {
   return (
+    <Provider store={store}>
     <>
       <Router>
         <Navbar />
@@ -35,6 +37,7 @@ function App() {
         <Footer />
       </Router>
     </>
+    </Provider>
   );
 }
 

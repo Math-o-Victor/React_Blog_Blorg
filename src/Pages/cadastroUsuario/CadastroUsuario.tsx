@@ -31,7 +31,6 @@ function CadastroUsuario() {
         }
     }, [usuarioResult])
 
-
     function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>) {
         setConfirmarSenha(e.target.value)
     }
@@ -58,6 +57,7 @@ function CadastroUsuario() {
             <Grid item xs={4} className='imagemCadastro'><h1> </h1></Grid>
             <Grid item xs={8} alignItems='center'>
                 <Box paddingX={10}>
+                    <img className='titul' src="https://imageshack.com/i/pmrMBJiYj" alt="Blorg!" />
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom component='h3' align='center' className='cadst'>Cadastre-se</Typography>
                         <TextField value={usuario.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' variant='outlined' name='nome' margin='normal' fullWidth className='campo' />
@@ -71,7 +71,7 @@ function CadastroUsuario() {
                                 Cadastrar
                             </Button>
                             
-                            <Link to='/' className='text-decorator-none2'>
+                            <Link to='/' className='text-decorator-none'>
                                 <Button variant='outlined' className='btn2'>
                                     Cancelar
                                 </Button>

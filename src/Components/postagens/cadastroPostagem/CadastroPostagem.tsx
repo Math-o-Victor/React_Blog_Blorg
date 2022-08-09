@@ -3,15 +3,18 @@ import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem,
 import './CadastroPostagem.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Tema from '../../../models/Tema';
-import useLocalStorage from 'react-use-localstorage';
 import Postagem from '../../../models/Postagem';
 import { busca, buscaId, post, put } from '../../../services/services';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/Tokens/tokensReducer';
 
 function CadastroPostagem() {
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
     const [temas, setTemas] = useState<Tema[]>([])
-    const [token] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState ["tokens"]>(
+        (state) => state.tokens
+      );
 
     useEffect(() => {
         if (token === "") {
@@ -101,7 +104,7 @@ function CadastroPostagem() {
     return (
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Criando uma nova ideia...</Typography>
+                <Typography className='fnt' variant="h3" color="textSecondary" component="h1" align="center" >Criando uma nova ideia...</Typography>
                 <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="Titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
                 <TextField value={postagem.texto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="texto" label="Texto" name="texto" variant="outlined" margin="normal" fullWidth />
 

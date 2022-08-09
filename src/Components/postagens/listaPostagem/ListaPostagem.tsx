@@ -3,14 +3,17 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaPostagem.css';
 import { Box } from '@mui/material';
-import useLocalStorage from 'react-use-localstorage';
 import Postagem from '../../../models/Postagem';
 import { busca } from '../../../services/services';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/Tokens/tokensReducer';
 
 function ListaPostagem() {
 
   const [postagem, setPostagem] = useState<Postagem[]>([])
-  const [token, setToken] = useLocalStorage('token')
+  const token = useSelector<TokenState, TokenState ["tokens"]>(
+    (state) => state.tokens
+  );
   let navigate = useNavigate()
 
   useEffect(() => {
@@ -39,17 +42,17 @@ function ListaPostagem() {
           <Box m={2} >
             <Card variant="outlined" className='cardSize'>
               <CardContent>
-                <Typography color="textSecondary" gutterBottom>
+                <Typography className='fnt' color="textSecondary" gutterBottom>
                   Ideia #{postagem.id}
                 </Typography>
-                <Typography variant="h5" component="h2">
+                <Typography className='fnt' variant="h5" component="h2">
                   {postagem.titulo}
                 </Typography>
-                <Typography variant='body2' component='p'>
+                <Typography className='fnt' variant='body2' component='p'>
                   {postagem.texto}
                 </Typography>
-                <Typography variant='body2' component='p'>
-                  {postagem.tema?.descricao}
+                <Typography className='fnt2' variant='body2' component='p'>
+                  #{postagem.tema?.descricao}
                 </Typography>
               </CardContent>
               <CardActions>

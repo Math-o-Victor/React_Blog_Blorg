@@ -18,3 +18,22 @@
     max-height: 300px;
     max-width: 300px;
 }
+
+.fnt{
+    font-family: 'Righteous', cursive!important;
+    font-weight: 900!important;
+}
+
+.fnt2{
+   font-family: 'Righteous', cursive!important;
+   font-weight: 900!important;
+   font-size: 20px!important;
+   text-align: end;
+}
+
+.fnt3{
+   font-family: 'Righteous', cursive!important;
+   font-weight: 900!important;
+   font-size: 50px!important;
+   text-align: center;
+}

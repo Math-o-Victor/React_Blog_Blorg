@@ -8,9 +8,10 @@
 }
 
 .blorg{
-    margin-right: 500px;
-    width: 140px;
+    display: block;
+    width: 25%;
     cursor:pointer;
+    min-width: 135px;
 }
 
 .cursor{
@@ -33,10 +34,9 @@
 }
 
 .size{
-    justify-content: flex-end;
-    height: 120px;
-}
-
-.home{
-    height: 120px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center!important;
+    width: 120px;
 }

@@ -3,16 +3,19 @@ import { Container, Typography, TextField, Button } from "@material-ui/core"
 import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/services';
 import { useNavigate, useParams } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import { Box } from '@mui/material';
 import './CadastroTema.css'
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/Tokens/tokensReducer';
 
 
 function CadastroTema() {
 
     let navigate = useNavigate()
     const { id } = useParams<{ id: string }>();
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState ["tokens"]>(
+        (state) => state.tokens
+      );
     const [tema, setTema] = useState<Tema>(
         {
             id: 0,
@@ -77,8 +80,8 @@ function CadastroTema() {
         <Box className='padding1'>
             <Container maxWidth="sm">
                 <form onSubmit={onSubmit}>
-                    <Typography variant="h3" color="textSecondary" component="h1" align="center" >Cadastro de Categorias</Typography>
-                    <Typography variant="h5" color="textSecondary" component="h2" align="center" >Escreva um tema e clique em finalizar para adicionar uma nova categoria</Typography>
+                    <Typography className='fnt' variant="h3" color="textSecondary" component="h1" align="center" >Cadastro de Categorias</Typography>
+                    <Typography className='fnt' variant="h5" color="textSecondary" component="h2" align="center" >Escreva um tema e clique em finalizar para adicionar uma nova categoria</Typography>
                     <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
                     <Typography align='center'>
                         <Button type="submit" variant="contained" color="primary" className='botao'>
