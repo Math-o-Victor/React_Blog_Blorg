@@ -8,6 +8,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/Tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 function DeletarPostagem() {
 
@@ -20,7 +21,16 @@ function DeletarPostagem() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Por favor, faça o login para continuar.")
+      toast.error("Por favor, realize o login para prosseguir",{
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover:true,
+        draggable: false,
+        theme: 'dark',
+        progress: undefined
+    })
       navigate("/login")
 
     }
@@ -42,12 +52,21 @@ function DeletarPostagem() {
 
   function sim() {
     navigate('/ideias')
-    deleteId(`deletarCateg/${id}`, {
+    deleteId(`/Postagens/${id}`, {
       headers: {
         'Authorization': token
       }
     });
-    alert('Postagem deletada com sucesso');
+    toast.info('Postagem deletada com sucesso',{
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover:true,
+      draggable: false,
+      theme: 'dark',
+      progress: undefined
+});
   }
 
   function nao() {
@@ -71,12 +90,12 @@ function DeletarPostagem() {
           <CardActions>
             <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
               <Box mx={2}>
-                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
+                <Button onClick={sim} variant="contained" className="botao1" size='large'>
                   Sim
                 </Button>
               </Box>
               <Box>
-                <Button onClick={nao} variant="contained" size='large' color="secondary">
+                <Button onClick={nao} variant="contained" size='large' className="botao2">
                   Não
                 </Button>
               </Box>

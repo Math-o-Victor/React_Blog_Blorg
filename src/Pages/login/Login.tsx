@@ -7,6 +7,7 @@ import { login } from "../../services/services";
 import './Login.css'
 import { useDispatch } from "react-redux";
 import { addToken } from "../../store/Tokens/actions";
+import { toast } from "react-toastify";
 
 function Login() {
 
@@ -38,9 +39,27 @@ function Login() {
         console.log('UsuarioLogin: '+ Object.values(UsuarioLogin))
         try{
             await login (`/usuarios/logar`, UsuarioLogin, setToken)
-            alert('Login realizado com sucesso. Bem Vindo de Volta!');
+            toast.info('Login realizado com sucesso. Bem Vindo de Volta!',{
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover:true,
+                draggable: false,
+                theme: 'dark',
+                progress: undefined
+        });
         }catch(error){
-            alert('Dados inválidos. Erro no login. :´(')
+            toast.error('Dados inválidos. Erro no login. :´(',{
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover:true,
+                draggable: false,
+                theme: 'dark',
+                progress: undefined
+        })
         }
     }
 

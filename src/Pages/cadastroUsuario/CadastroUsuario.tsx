@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { cadastroUsuario } from '../../services/services';
 import Usuario from '../../models/Usuario';
 import './CadastroUsuario.css';
+import { toast } from 'react-toastify';
 
 function CadastroUsuario() {
     let history = useNavigate();
@@ -46,9 +47,27 @@ function CadastroUsuario() {
         e.preventDefault();
         if (confirmarSenha == usuario.senha) {
             cadastroUsuario(`/usuarios/cadastrar`, usuario, setUsuarioResult)
-            alert('Usuario cadastrado com sucesso!')
+            toast.success('Usuario cadastrado com sucesso!',{
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover:true,
+                draggable: false,
+                theme: 'dark',
+                progress: undefined
+        })
         } else {
-            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
+            toast.error('Dados inconsistentes. Favor verificar as informações de cadastro.',{
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover:true,
+                draggable: false,
+                theme: 'dark',
+                progress: undefined
+        })
         }
     }
 

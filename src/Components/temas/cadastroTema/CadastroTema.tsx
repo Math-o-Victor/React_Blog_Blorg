@@ -7,6 +7,7 @@ import { Box } from '@mui/material';
 import './CadastroTema.css'
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/Tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 
 function CadastroTema() {
@@ -25,7 +26,16 @@ function CadastroTema() {
 
     useEffect(() => {
         if (token === '') {
-            alert("Por favor, realize o login para prosseguir")
+            toast.error("Por favor, realize o login para prosseguir",{
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover:true,
+                draggable: false,
+                theme: 'dark',
+                progress: undefined
+            })
             navigate("/login")
         }
     }, [token])
@@ -60,14 +70,32 @@ function CadastroTema() {
                     'Authorization': token
                 }
             })
-            alert("Categoria atualizada com sucesso")
+            toast.success("Categoria atualizada com sucesso",{
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover:true,
+                draggable: false,
+                theme: 'dark',
+                progress: undefined
+        })
         } else {
             post(`/tema/tema`, tema, setTema, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert("Categoria adicionada com sucesso. Você já pode criar uma ideia com ela.")
+            toast.success("Categoria adicionada com sucesso. Você já pode criar uma ideia com ela.",{
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover:true,
+                draggable: false,
+                theme: 'dark',
+                progress: undefined
+        })
         }
         back()
     }

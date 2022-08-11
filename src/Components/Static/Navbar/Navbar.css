@@ -8,10 +8,9 @@
 }
 
 .blorg{
-    display: block;
     width: 25%;
-    cursor:pointer;
     min-width: 135px;
+    justify-content: start!important;
 }
 
 .cursor{
@@ -37,6 +36,29 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    justify-content: center!important;
-    width: 120px;
+    width: 50%;
+    min-width: 110px;
+}
+
+.width{
+    width:110px;
+}
+
+.homeWidth{
+ width:110px!important;
+}
+
+.direita{
+    display: inline-block;
+    justify-content: end!important;
+}
+
+.esquerda{
+    display: inline-block;
+    justify-content: start;
+}
+
+.espacinho{
+    width: 700px!important;
+    min-width: 30%;
 }

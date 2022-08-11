@@ -1,0 +1,13 @@
+.botao1{
+    background-color: black!important;
+    color: white!important;
+    outline: white!important;
+    outline-offset: 3px;
+}
+
+.botao2{
+    background-color: white!important;
+    color: black!important;
+    outline: black!important;
+    outline-offset: 3px;
+}

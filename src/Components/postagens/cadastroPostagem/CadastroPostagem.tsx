@@ -7,6 +7,7 @@ import Postagem from '../../../models/Postagem';
 import { busca, buscaId, post, put } from '../../../services/services';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/Tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 function CadastroPostagem() {
     let navigate = useNavigate();
@@ -18,7 +19,16 @@ function CadastroPostagem() {
 
     useEffect(() => {
         if (token === "") {
-            alert("Você precisa estar logado")
+            toast.error("Por favor, realize o login para prosseguir",{
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover:true,
+                draggable: false,
+                theme: 'dark',
+                progress: undefined
+            })
         navigate("/login")
 
         }
@@ -85,14 +95,32 @@ function CadastroPostagem() {
                     'Authorization': token
                 }
             })
-            alert('Sua ideia foi atualizada com sucesso');
+            toast.success('Sua ideia foi atualizada com sucesso',{
+                    position: "bottom-center",
+                    autoClose: 5000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover:true,
+                    draggable: false,
+                    theme: 'dark',
+                    progress: undefined
+            });
         } else {
             post(`/Postagens`, postagem, setPostagem, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('Sua ideia foi adicionada com sucesso');
+            toast.success('Sua ideia foi adicionada com sucesso',{
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover:true,
+                draggable: false,
+                theme: 'dark',
+                progress: undefined
+        });
         }
         back()
     }
