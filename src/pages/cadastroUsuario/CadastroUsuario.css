@@ -1,0 +1,38 @@
+.imagemCadastro{
+    background-image: url(http://2.bp.blogspot.com/-cIDiq9LslYg/U39XzsBuWaI/AAAAAAAAL4k/FkAGMLXaVWI/s1600/image018-776865.gif);
+        background-size:cover;
+        font-size: 320px;
+        width: '100vh'!important;
+        background-position: center;
+}
+
+.pad{
+    padding: 3%;
+    background-color: black;
+}
+
+.btn{
+    border-color: white!important;
+    background-color: black!important; 
+    color: white!important;
+}
+
+.btn2{
+    border-color: black!important;
+    background-color: white!important; 
+    color: black!important;
+}
+
+.cadst{
+    font-family: Righteous, sans-serif!important;
+    font-weight: 900!important;
+    color: white;
+}
+.campo{
+    background-color: white!important;
+    opacity: 70%;
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}

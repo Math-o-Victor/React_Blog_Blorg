@@ -1,0 +1,25 @@
+.containerF{
+    justify-content: center!important;
+    align-items: center!important;
+    position:relative;
+    display: flex;
+}
+
+.textWhite{
+    font-family: 'Righteous', cursive!important;
+    color: #ffffff;
+    font-weight: bolder!important;
+}
+
+.feedback{
+    font-family: 'Righteous', cursive!important;
+    color: white;
+    font-size: 17px!important;
+}
+
+.icone{
+    display: inline-block!important;
+    font-size: 35px!important;
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,77 @@
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.imagem{
+    background-color: black;
+    font-size: 320px;
+    width: '100vh'!important;
+    background-position: center;
+}
+
+.cadastre{
+    font-weight:'bold';
+    font-size: 30px!important;
+    font-family: 'Righteous', cursive!important;
+    font-weight: 900!important;
+    background-position:center;
+    background-size: contain;
+    color: white!important;
+}
+
+.entre{
+    margin-top: 3%;
+    font-family: 'Righteous', cursive!important;
+    font-weight: 900!important;
+    background-position:center;
+    background-size: contain;
+    color: white!important;
+    font-size: 90px!important;
+}
+
+.entre2{
+    margin-top: 3%;
+    font-family: 'Righteous', cursive!important;
+    font-weight: 900!important;
+    background-position:center;
+    background-size: contain;
+    color: white!important;
+    opacity: 65%;
+    font-size: 25px!important;
+}
+
+.entre3{
+    margin-top: 3%;
+    font-family: 'Righteous', cursive!important;
+    font-weight: 900!important;
+    background-position:center;
+    background-size: contain;
+    color: white!important;
+    opacity: 90%;
+    font-size: 44px!important;
+}
+
+.waves{
+    padding: 2%;
+    background-position: center;
+    background-size: 38%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 20%, rgba(255, 255, 255,0),black 90%),url('https://i.pinimg.com/originals/4b/5d/a6/4b5da63844b3760bb5dcc9ef2e6fa402.gif');
+    background-size: cover;
+}
+
+.gradiente{
+    background-position: left;
+    background: #000000;
+}
+
+.fundob{
+    background-color: white;
+    opacity: 70%;
+}
+
+.titul{
+    width: 10%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

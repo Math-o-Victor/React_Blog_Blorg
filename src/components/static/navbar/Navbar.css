@@ -1,0 +1,63 @@
+.bg-menu{
+    background:#000000!important;
+}
+
+.title{
+    padding:10px;
+    font-weight: bolder!important;
+}
+
+.blorg{
+    width: 25%;
+    min-width: 135px;
+    justify-content: start!important;
+}
+
+.cursor{
+    cursor:pointer;
+}
+
+.logout{
+    padding:10px;
+    font-weight: bold!important;
+    justify-content: flex-end;
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}
+
+.textow{
+    font-family: 'MeltdownMF', sans-serif!important;
+}
+
+.size{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 50%;
+    min-width: 110px;
+}
+
+.width{
+    width:110px;
+}
+
+.homeWidth{
+ width:110px!important;
+}
+
+.direita{
+    display: inline-block;
+    justify-content: end!important;
+}
+
+.esquerda{
+    display: inline-block;
+    justify-content: start;
+}
+
+.espacinho{
+    width: 700px!important;
+    min-width: 30%;
+}
